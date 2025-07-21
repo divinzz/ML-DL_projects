@@ -1,117 +1,67 @@
-🛍️ Amazon Review Sentiment Analysis (BiLSTM + Flask)
-This project uses Natural Language Processing (NLP) and a Bidirectional LSTM neural network to predict whether an Amazon product review is positive or negative. It is trained on a subset of Amazon reviews and served via a Flask web app for interactive predictions.
+# 🤖 Amazon Product Review Sentiment Analysis using LSTM 🚀
 
-🔍 Overview
-Data: Amazon product reviews dataset (train.ft.txt.bz2 & test.ft.txt.bz2)
+This project performs **sentiment analysis** on Amazon product reviews using **Deep Learning (LSTM)** and provides a **real-time prediction web app using Flask**. It classifies reviews as **Positive 😊** or **Negative 😡**, helping businesses and users gain quick insights into customer feedback.
 
-Model: Deep learning model using Bidirectional LSTM, trained on 12,000 reviews
+---
 
-Text Processing: Cleaning, stemming, stopword removal, and tokenization
+## 📌 Project Highlights
 
-Deployment: Flask-based web app for real-time sentiment prediction
+- 🔍 Dataset: Amazon Reviews (`train.ft.txt.bz2`, `test.ft.txt.bz2`)
+- 🧼 Preprocessing: Label parsing, cleaning, stemming, stopword removal
+- 📊 Tokenization: Keras Tokenizer + Padding
+- 🧠 Model: Bidirectional LSTM with Dropout & LayerNormalization
+- 🖥️ Frontend: Flask Web App for live sentiment predictions
+- 🧪 Accuracy: ~83% on validation data
+- ✅ Confusion Matrix & Classification Report generated
 
-📊 Dataset
-train.ft.txt.bz2: 12,000 training samples
+---
 
-test.ft.txt.bz2: 2,500 test samples
+## 🗂️ Folder Structure
 
-Each line is prefixed with a label (__label__1 or __label__2)
+├── app.py # Flask Web App
+├── lstm_model.h5 # Trained LSTM Model
+├── tokenizer.pkl # Saved Tokenizer
+├── templates/
+│ └── index.html # Frontend HTML
+├── static/ (optional) # For CSS/JS if added
+├── amazonreviews.zip # Original dataset
 
-⚙️ Model Architecture
-Embedding Layer (1000 words, 300-dim)
-
-Bidirectional LSTM (2 layers with 128 units each)
-
-Layer Normalization + Dropout
-
-Dense layers with ReLU and Sigmoid for binary classification
-
-📈 Model Evaluation
-After training the model for up to 50 epochs (with early stopping), we observed the following results on the test set:
-
-matlab
+yaml
 Copy
 Edit
-Accuracy       : 83%
-Precision (0)  : 82%
-Recall (0)     : 82%
-F1-Score (0)   : 82%
-Precision (1)  : 84%
-Recall (1)     : 84%
-F1-Score (1)   : 84%
-✅ Confusion Matrix:
 
-lua
-Copy
-Edit
-[[ 979  212]
- [ 212 1097]]
-💻 Web App (Flask)
-The trained LSTM model is deployed using a Flask app:
+---
 
-Features:
-Input: Any English sentence
+## 🧰 Tech Stack
 
-Output: Sentiment prediction (Positive 😊 / Negative 😡) with confidence score
+- Python 3.10+
+- TensorFlow / Keras
+- NLTK
+- NumPy, Matplotlib, re
+- Flask
+- HTML/CSS (optional for styling)
 
-Example:
+---
+
+📊 Model Performance
 text
 Copy
 Edit
-Input:   "This is the worst product I’ve ever used."
-Output:  Sentiment: Negative 😡  (Confidence: 0.0041)
-📂 File Structure
-arduino
-Copy
-Edit
-📁 amazon-review-sentiment/
-├── model/
-│   ├── lstm_model.h5
-│   └── tokenizer.pkl
-├── templates/
-│   └── index.html
-├── static/
-│   └── (optional CSS/image files)
-├── app.py
-├── README.md
-├── train.ft.txt.bz2
-├── test.ft.txt.bz2
-└── requirements.txt
-📦 Libraries Used
-TensorFlow / Keras
+Confusion Matrix:
+[[ 979  212]
+ [ 212 1097]]
 
-NLTK (stopwords, stemming)
+Accuracy: 83%
+Precision: 82% (Neg), 84% (Pos)
+F1-score: 83%
+📈 Result Summary & Conclusion
+The model achieves 83% accuracy on the test set.
 
-NumPy
+It effectively distinguishes between positive and negative reviews.
 
-Matplotlib
+The app performs real-time sentiment classification through a clean Flask interface.
 
-Flask
-
-scikit-learn (metrics)
-
-🧠 How It Works (Core Pipeline)
-Data Extraction → Load .bz2 files
-
-Label Processing → Convert to binary (0 for negative, 1 for positive)
-
-Text Cleaning → Lowercase, remove special characters, stem words
-
-Tokenization + Padding
-
-Model Training → BiLSTM + Dropout + LayerNorm
-
-Evaluation & Deployment
-
-✅ Results Summary
-Achieved 83% accuracy on unseen test data
-
-Strong performance across both positive and negative reviews
-
-Robust to various phrasing and expressions
-
-🧾 Conclusion
-This project demonstrates a complete end-to-end sentiment analysis pipeline — from raw review data to model deployment via Flask. The BiLSTM model efficiently captures text context and performs binary classification with high accuracy.
+Conclusion: This model and app demonstrate how deep learning can be applied to practical NLP problems like sentiment analysis on real-world data.
 
 
 ![Image](https://github.com/user-attachments/assets/0df74dc6-4a54-4943-8f7d-0b880fd3bb14)
