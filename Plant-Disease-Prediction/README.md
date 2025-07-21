@@ -72,7 +72,8 @@ It also lays the foundation for further enhancement through:
 - `class indices.json` – Maps predicted class index to name
 - `README.md` – Project documentation
 
+---
 
-# OUTPUT OF THE TASK
+## OUTPUT OF THE TASK
 
 ![Image](https://github.com/user-attachments/assets/c6d6f57a-243a-436b-b096-d3598fbdc943)
