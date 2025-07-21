@@ -16,22 +16,6 @@ This project performs **sentiment analysis** on Amazon product reviews using **D
 
 ---
 
-## 🗂️ Folder Structure
-
-├── app.py # Flask Web App
-├── lstm_model.h5 # Trained LSTM Model
-├── tokenizer.pkl # Saved Tokenizer
-├── templates/
-│ └── index.html # Frontend HTML
-├── static/ (optional) # For CSS/JS if added
-├── amazonreviews.zip # Original dataset
-
-yaml
-Copy
-Edit
-
----
-
 ## 🧰 Tech Stack
 
 - Python 3.10+
