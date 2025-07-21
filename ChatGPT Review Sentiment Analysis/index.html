@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatGPT Review Sentiment Analysis</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #F7F8FA;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .container {
+            background-color: white;
+            width: 100%;
+            max-width: 700px;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            overflow-y: auto;
+        }
+
+        h1 {
+            font-size: 2.4em;
+            color: black;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .best-sentence {
+            font-size: 1.1em;
+            color: #6A6A6A;
+            margin-bottom: 30px;
+            font-weight: 500;
+        }
+
+        .input-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .input-box {
+            width: 100%;
+            padding: 16px;
+            font-size: 1.1em;
+            border: 1px solid #E0E0E0;
+            border-radius: 10px;
+            outline: none;
+            box-sizing: border-box;
+            transition: border-color 0.3s ease;
+        }
+
+        .input-box:focus {
+            border-color: #4A90E2;
+        }
+
+        .btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 30px;
+            font-size: 1.1em;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #357ABD;
+        }
+
+        .result {
+            margin-top: 30px;
+            font-size: 1.3em;
+            font-weight: normal;
+            color: black;
+        }
+
+        .result strong {
+            font-weight: bold;
+            color: #4CAF50;
+        }
+
+        .footer {
+            margin-top: 40px;
+            font-size: 0.9em;
+            color: #6A6A6A;
+        }
+
+        .footer a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>ChatGPT Review Sentiment Analysis</h1>
+    <p class="best-sentence">"Understanding your feedback, powered by advanced AI."</p>
+
+    <!-- Chat-like Review Section -->
+    <div class="input-container">
+        <form method="POST" action="/predict">
+            <textarea class="input-box" name="review" rows="4" placeholder="Enter your review of ChatGPT..." required>{{ review if review else '' }}</textarea><br>
+            <button type="submit" class="btn">Analyze Sentiment</button>
+        </form>
+    </div>
+
+    {% if sentiment %}
+    <div class="result">
+        <p><span style="font-size: smaller;">The sentiment of your review is:</span> <strong>{{ sentiment }}</strong></p>
+
+    </div>
+    {% endif %}
+
+    <div class="footer">
+        <p>Powered by AI to analyze your ChatGPT reviews. <a href="#">Learn More</a></p>
+    </div>
+</div>
+
+</body>
+</html>
+
+
+
+
+
