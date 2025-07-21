@@ -1,51 +1,69 @@
-# 🤖 Amazon Product Review Sentiment Analysis using LSTM 🚀
+# 🛍️ Amazon Product Review Sentiment Analysis using LSTM & Flask
 
-This project performs **sentiment analysis** on Amazon product reviews using **Deep Learning (LSTM)** and provides a **real-time prediction web app using Flask**. It classifies reviews as **Positive 😊** or **Negative 😡**, helping businesses and users gain quick insights into customer feedback.
+This project uses **Natural Language Processing (NLP)** and **Deep Learning** to classify Amazon product reviews as **positive** or **negative**. A **Bidirectional LSTM** model processes text data efficiently, and a simple **Flask web app** allows for real-time user interaction.
 
 ---
 
 ## 📌 Project Highlights
 
-- 🔍 Dataset: Amazon Reviews (`train.ft.txt.bz2`, `test.ft.txt.bz2`)
-- 🧼 Preprocessing: Label parsing, cleaning, stemming, stopword removal
-- 📊 Tokenization: Keras Tokenizer + Padding
-- 🧠 Model: Bidirectional LSTM with Dropout & LayerNormalization
-- 🖥️ Frontend: Flask Web App for live sentiment predictions
-- 🧪 Accuracy: ~83% on validation data
-- ✅ Confusion Matrix & Classification Report generated
+- 🧹 **Preprocessing**: Text cleaning, stemming, stopword removal, and tokenization.
+- 📊 **EDA**: Word clouds for positive/negative reviews, review length distributions, class balance check.
+- 🧠 **Model**: Bidirectional LSTM using embedding, dropout, normalization, and dense layers.
+- 🌐 **Flask Web Interface**: Enter a review in the browser and get instant sentiment feedback.
+- 🎯 **Performance**: Achieved ~83% test accuracy.
 
 ---
 
-## 🧰 Tech Stack
+## 🧠 Model Summary
 
-- Python 3.10+
-- TensorFlow / Keras
-- NLTK
-- NumPy, Matplotlib, re
-- Flask
-- HTML/CSS (optional for styling)
+- **Embedding Layer** – Converts text to numerical format
+- **Bidirectional LSTM** – Processes sequences in both directions
+- **Dropout & Normalization** – Improves generalization
+- **Dense Output Layer** – Predicts sentiment (positive/negative)
 
 ---
 
-📊 Model Performance
-text
+## 📊 Evaluation Metrics
+
+- **Test Accuracy**: ~83%
+- **Confusion Matrix**:
+
+[[979 212]
+[212 1097]]
+
+yaml
 Copy
 Edit
-Confusion Matrix:
-[[ 979  212]
- [ 212 1097]]
 
-Accuracy: 83%
-Precision: 82% (Neg), 84% (Pos)
-F1-score: 83%
-📈 Result Summary & Conclusion
-The model achieves 83% accuracy on the test set.
+- **Precision**:  
+- Positive: 84%  
+- Negative: 82%
+- **F1 Score**: ~83%
 
-It effectively distinguishes between positive and negative reviews.
+---
 
-The app performs real-time sentiment classification through a clean Flask interface.
+## 🗂️ Folder Structure
 
-Conclusion: This model and app demonstrate how deep learning can be applied to practical NLP problems like sentiment analysis on real-world data.
+amazon-sentiment-lstm/
+│
+├── app.py # Flask web app
+├── lstm_model.h5 # Trained LSTM model
+├── tokenizer.pkl # Tokenizer for new text
+├── templates/
+│ └── index.html # Web interface page
+├── static/ # (Optional) for styling
+├── amazonreviews.zip # Dataset
+└── README.md
+
+---
+
+## 🧾 Conclusion
+
+This project demonstrates how **deep learning** and **NLP** techniques can be applied to sentiment classification tasks in real-world scenarios. Using a **Bidirectional LSTM** architecture, we achieved strong performance in identifying sentiment from Amazon reviews. 
+
+By integrating the model with a **Flask web interface**, the system becomes interactive and user-friendly — allowing anyone to test the model with custom inputs in real time.
+
+It lays the groundwork for scalable applications like customer feedback analysis, product review filtering, and automated moderation systems.
 
 
 ![Image](https://github.com/user-attachments/assets/0df74dc6-4a54-4943-8f7d-0b880fd3bb14)
