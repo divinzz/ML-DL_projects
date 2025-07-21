@@ -31,30 +31,11 @@ This project uses **Natural Language Processing (NLP)** and **Deep Learning** to
 [[979 212]
 [212 1097]]
 
-yaml
-Copy
-Edit
 
 - **Precision**:  
 - Positive: 84%  
 - Negative: 82%
 - **F1 Score**: ~83%
-
----
-
-## 🗂️ Folder Structure
-
-amazon-sentiment-lstm/
-│
-├── app.py # Flask web app
-├── lstm_model.h5 # Trained LSTM model
-├── tokenizer.pkl # Tokenizer for new text
-├── templates/
-│ └── index.html # Web interface page
-├── static/ # (Optional) for styling
-├── amazonreviews.zip # Dataset
-└── README.md
-
 ---
 
 ## 🧾 Conclusion
