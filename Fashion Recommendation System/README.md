@@ -44,25 +44,6 @@ This project aims to build a **Fashion Recommendation System** that can classify
 
 ---
 
-## 📁 Project Structure
-
-├── dataset/
-│ ├── Casual/
-│ ├── Formal/
-│ └── Ethnic/
-├── data_preprocess.py
-├── model_train.py
-├── fashion_model.h5
-├── real_time_prediction.py
-├── data.npy
-├── target.npy
-└── README.md
-
-yaml
-Copy
-Edit
-
----
 
 ## 📊 Key Libraries Used
 
@@ -88,30 +69,6 @@ Edit
 
 ---
 
-## 🖥️ How to Run the Project
-
-1. **Clone the Repository**  
-   ```bash
-   git clone https://github.com/yourusername/fashion-recommendation.git
-   cd fashion-recommendation
-Install Requirements
-
-bash
-Copy
-Edit
-pip install -r requirements.txt
-Train the Model (Optional)
-
-bash
-Copy
-Edit
-python model_train.py
-Run Real-Time Fashion Detector
-
-bash
-Copy
-Edit
-python real_time_prediction.py
 💡 Features
 Recommends fashion styles using deep learning
 
