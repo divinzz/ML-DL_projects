@@ -58,12 +58,12 @@ This project demonstrates how optimization techniques can significantly enhance 
 
 **Version 1 (PuLP)** :
 
-![Image](https://github.com/user-attachments/assets/2fcca81f-b2b8-40a9-baa4-bfadc9df5182)
+<img width="331" height="107" alt="Image" src="https://github.com/user-attachments/assets/1202fbd4-f480-471c-a2c7-77812c401bc3" />
 
 **Version 2 (Optimized)** : 
 
+<img width="392" height="185" alt="Image" src="https://github.com/user-attachments/assets/4e0ca069-d1c6-4ffa-99c5-668206867dac" />
 
 
 
-![Image](https://github.com/user-attachments/assets/fc429340-0f66-418b-acb4-f82756ee8db4)
 
