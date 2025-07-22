@@ -1,103 +1,89 @@
 # 🖼️ Image Caption Generator
 
-A deep learning project that automatically generates captions for images using a CNN-RNN architecture. This implementation uses the **Flickr8k** dataset, **DenseNet201** as the feature extractor, and a custom LSTM decoder. The project is also deployed using **Streamlit** for interactive use.
+This project generates image captions using a CNN-RNN architecture trained on the **Flickr8k** dataset. It uses **DenseNet201** for feature extraction and an **LSTM decoder** to generate descriptive captions. The model is deployed with a user-friendly **Streamlit** app.
 
 ---
 
 ## 📁 Dataset
 
-- **Name**: [Flickr8k](https://www.kaggle.com/datasets/adityajn105/flickr8k)
-- **Contents**:
-  - 8,000+ images (`Images/`)
-  - Corresponding captions in `captions.txt`
+- **Flickr8k**: 8000+ images with five captions per image.
+- Download from [Kaggle](https://www.kaggle.com/datasets/adityajn105/flickr8k)
 
 ---
 
-## 🧠 Model Architecture
+## 🧠 Model Overview
 
-- **Feature Extractor**: DenseNet201 (pre-trained on ImageNet, outputs 1920-dimensional features)
-- **Caption Generator**: 
-  - Embedding Layer
-  - LSTM (256 units)
-  - Dense layers for final vocabulary prediction
-- **Loss Function**: Categorical Crossentropy
+- **Feature Extractor**: DenseNet201 (pretrained)
+- **Decoder**: LSTM with embedding + dense layers
+- **Loss**: Categorical Crossentropy
 - **Optimizer**: Adam
-- **Training Strategy**: Custom `DataGenerator` with image and sequence inputs
-
----
-
-## 🔧 Features
-
-- Custom preprocessing for image and text
-- Feature extraction and tokenizer saving/loading
-- Training with checkpointing, early stopping, and learning rate reduction
-- Caption generation with greedy decoding
-- Streamlit app for interactive caption generation
-
----
-
-## 📂 Project Structure
-
-.
-├── flickr8k/ # Unzipped dataset
-│ ├── Images/
-│ └── captions.txt
-├── model.keras # Trained caption model
-├── feature_extractor.keras # DenseNet201 feature extractor
-├── tokenizer.pkl # Saved tokenizer
-├── app.py # Streamlit web app
-├── train_model.ipynb # Jupyter Notebook with full training pipeline
-└── README.md
-
-yaml
-Copy
-Edit
 
 ---
 
 ## 🚀 Getting Started
 
-1. Clone the repository
-
+### 1. Clone the repository
 ```bash
 git clone https://github.com/yourusername/image-caption-generator.git
 cd image-caption-generator
-
-
-2. Install dependencies
+2. Install required packages
 bash
 Copy
 Edit
 pip install -r requirements.txt
-Requirements:
+Required Libraries:
 
-txt
-Copy
-Edit
 tensorflow
-streamlit
-matplotlib
+
 numpy
+
 pandas
+
+matplotlib
+
 tqdm
 
+streamlit
 
-3. Run the Streamlit App
+pickle
 
+You can create a requirements.txt file with these.
+
+3. Download and extract dataset
+Place the dataset files (Images/, captions.txt) inside a flickr8k/ directory in your project root.
+
+4. Train the model (Optional)
+Use the provided training notebook or scripts.
+
+5. Run the Streamlit App
 bash
 Copy
 Edit
 streamlit run app.py
-4. Upload an image and generate captions in real-time!
-🧪 Model Performance
-Training loss: ↓ 3.12
+🎯 Features
+Extracts image features with DenseNet201
 
-Validation loss: ↓ 3.60
+Tokenizes and encodes captions
 
-Epochs: 14 (early stopping)
+Trains a caption generation model
+
+Saves model and tokenizer
+
+Interactive caption generation with Streamlit
+
+🖼️ Example Output
+Image:
+(Upload your own in the app)
+
+Generated Caption:
+"a young boy is playing with a dog in the park"
+
+🧪 Model Info
+Best val_loss: ~3.60
+
+Early stopping after 14 epochs
 
 
-## output
 
 <img width="680" height="848" alt="Image" src="https://github.com/user-attachments/assets/b6677501-6d53-49da-b157-18dc62af5aa4" />
 
