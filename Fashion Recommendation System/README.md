@@ -55,11 +55,6 @@ Edit
 
 ---
 
-## 📸 Sample Output
-
-Here’s an example of how the app looks when a user uploads a fashion item:
-
-<img width="680" alt="Fashion Recommendation Demo" src="https://your-image-link-here" />
 
 **Recommended Items:**
 
