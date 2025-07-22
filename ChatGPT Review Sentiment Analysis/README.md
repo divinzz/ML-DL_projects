@@ -55,6 +55,6 @@ The ChatGPT Sentiment Analysis project demonstrates how machine learning and nat
 
 # OUTPUT OF THE TASK
 
-![Image](https://github.com/user-attachments/assets/f48ba0aa-3a5a-459c-a60a-be8ac952eb5a)
-![Image](https://github.com/user-attachments/assets/d538e505-5ed3-44de-80fa-84da860ba597)
-![Image](https://github.com/user-attachments/assets/84111e20-9b0d-4a72-ac50-14a1630d6173)
+<img width="1883" height="1003" alt="Image" src="https://github.com/user-attachments/assets/8bcd257d-dcae-4b41-b628-68f5ef3c552a" />
+<img width="1886" height="988" alt="Image" src="https://github.com/user-attachments/assets/04c0ad2f-b560-4a2b-b9e2-94588186d98b" />
+<img width="1886" height="993" alt="Image" src="https://github.com/user-attachments/assets/d3f39a56-d717-487e-aca3-7257322c83c6" />
