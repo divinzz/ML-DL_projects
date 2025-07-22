@@ -1,22 +1,52 @@
-# 🧠📸 Image Caption Generator
+# 🖼️ Image Caption Generator
 
-This project generates descriptive captions for images using a deep learning model combining **DenseNet201** for image feature extraction and **LSTM** for language generation. The app is trained on the [Flickr8k dataset](https://www.kaggle.com/datasets/adityajn105/flickr8k) and deployed using **Streamlit**.
+A deep learning project that automatically generates captions for images using a CNN-RNN architecture. This implementation uses the **Flickr8k** dataset, **DenseNet201** as the feature extractor, and a custom LSTM decoder. The project is also deployed using **Streamlit** for interactive use.
 
 ---
 
+## 📁 Dataset
 
-## 📁 Project Structure
+- **Name**: [Flickr8k](https://www.kaggle.com/datasets/adityajn105/flickr8k)
+- **Contents**:
+  - 8,000+ images (`Images/`)
+  - Corresponding captions in `captions.txt`
 
-image-caption-generator/
-│
-├── app.py # Streamlit application
-├── model.keras # Trained caption generation model
-├── feature_extractor.keras # DenseNet201 feature extractor
-├── tokenizer.pkl # Tokenizer used for caption encoding
-├── flickr8k/ # Dataset folder
+---
+
+## 🧠 Model Architecture
+
+- **Feature Extractor**: DenseNet201 (pre-trained on ImageNet, outputs 1920-dimensional features)
+- **Caption Generator**: 
+  - Embedding Layer
+  - LSTM (256 units)
+  - Dense layers for final vocabulary prediction
+- **Loss Function**: Categorical Crossentropy
+- **Optimizer**: Adam
+- **Training Strategy**: Custom `DataGenerator` with image and sequence inputs
+
+---
+
+## 🔧 Features
+
+- Custom preprocessing for image and text
+- Feature extraction and tokenizer saving/loading
+- Training with checkpointing, early stopping, and learning rate reduction
+- Caption generation with greedy decoding
+- Streamlit app for interactive caption generation
+
+---
+
+## 📂 Project Structure
+
+.
+├── flickr8k/ # Unzipped dataset
 │ ├── Images/
 │ └── captions.txt
-├── requirements.txt # List of Python dependencies
+├── model.keras # Trained caption model
+├── feature_extractor.keras # DenseNet201 feature extractor
+├── tokenizer.pkl # Saved tokenizer
+├── app.py # Streamlit web app
+├── train_model.ipynb # Jupyter Notebook with full training pipeline
 └── README.md
 
 yaml
@@ -25,102 +55,38 @@ Edit
 
 ---
 
-## 📦 Installation
+## 🚀 Getting Started
 
+### 1. Clone the repository
 ```bash
-git clone https://github.com/your-username/image-caption-generator.git
+git clone https://github.com/yourusername/image-caption-generator.git
 cd image-caption-generator
+2. Install dependencies
+bash
+Copy
+Edit
 pip install -r requirements.txt
-📥 Dataset
-Download the dataset: Flickr8k - Kaggle
+Requirements:
 
-Unzip the contents into the flickr8k/ directory as follows:
-
-
-flickr8k/
-├── Images/
-└── captions.txt
-🛠️ Model Training Steps
-Caption Preprocessing
-
-Lowercase, remove punctuation, clean spacing
-
-Add startseq and endseq tokens
-
-Tokenization
-
-python
+txt
 Copy
 Edit
-from tensorflow.keras.preprocessing.text import Tokenizer
-tokenizer = Tokenizer()
-tokenizer.fit_on_texts(captions)
-Feature Extraction with DenseNet201
-
-python
-Copy
-Edit
-fe = Model(inputs=model.input, outputs=model.layers[-2].output)
-Sequence Modeling with LSTM
-Combined with image features using a custom architecture.
-
-Model Training
-
-python
-Copy
-Edit
-caption_model.fit(
-    train_generator,
-    epochs=50,
-    validation_data=validation_generator,
-    callbacks=[checkpoint, earlystopping, learning_rate_reduction]
-)
-Saving Models
-
-python
-Copy
-Edit
-caption_model.save("model.keras")
-feature_extractor.save("feature_extractor.keras")
-with open("tokenizer.pkl", "wb") as f:
-    pickle.dump(tokenizer, f)
-🖥️ Running the Streamlit App
+tensorflow
+streamlit
+matplotlib
+numpy
+pandas
+tqdm
+3. Run the Streamlit App
 bash
 Copy
 Edit
 streamlit run app.py
-Then open http://localhost:8501 in your browser.
+4. Upload an image and generate captions in real-time!
+🧪 Model Performance
+Training loss: ↓ 3.12
 
-📷 Example Output
-Input Image
+Validation loss: ↓ 3.60
 
+Epochs: 14 (early stopping)
 
-Generated Caption
-
-text
-Copy
-Edit
-a dog running across a grassy field
-📊 Training Results
-Metric	Value
-Train Loss	~3.1
-Val Loss	~3.6
-Optimizer	Adam
-Epochs	14
-
-✅ Requirements
-Install all dependencies using:
-
-pip install -r requirements.txt
-Contents of requirements.txt:
-
-nginx
-Copy
-Edit
-tensorflow
-numpy
-pandas
-matplotlib
-pillow
-tqdm
-streamlit
