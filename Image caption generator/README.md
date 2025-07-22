@@ -96,3 +96,5 @@ Validation loss: ↓ 3.60
 
 Epochs: 14 (early stopping)
 
+<img width="680" height="848" alt="Image" src="https://github.com/user-attachments/assets/b6677501-6d53-49da-b157-18dc62af5aa4" />
+
