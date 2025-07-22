@@ -52,10 +52,18 @@ User uploads a fashion image
 
 The app displays the top visually similar items
 
-📸 Sample Output
-<img width="680" alt="Demo" src="https://github.com/user-attachments/assets/b6677501-6d53-49da-b157-18dc62af5aa4" />
-Example Caption:
-“Here are the top 5 visually similar fashion items for your input.”
+## 📸 Sample Output
+
+Here’s an example of how the app looks when a user uploads a fashion item:
+
+<img width="680" alt="Fashion Recommendation Demo" src="https://your-image-link-here" />
+
+**Recommended Items:**
+
+- Similar shirts, dresses, or styles from the dataset
+- Based on visual features (texture, color, pattern)
+
+The system displays the top visually similar images in a horizontal or grid layout.
 
 🔮 Potential Improvements
 Use FAISS or Annoy for faster similarity search on large datasets
