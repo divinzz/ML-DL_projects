@@ -58,9 +58,12 @@ Edit
 ## 🚀 Getting Started
 
 ### 1. Clone the repository
+
 ```bash
 git clone https://github.com/yourusername/image-caption-generator.git
 cd image-caption-generator
+
+
 2. Install dependencies
 bash
 Copy
@@ -77,7 +80,10 @@ matplotlib
 numpy
 pandas
 tqdm
+
+
 3. Run the Streamlit App
+
 bash
 Copy
 Edit
