@@ -86,4 +86,4 @@ A user-friendly interface built with **Streamlit** allows:
 
 ## Output :
 
-<img width="1700" height="989" alt="Image" src="https://github.com/user-attachments/assets/d4ecef70-29b8-4193-a743-6f7161a9b675" />
+<img width="1700" height="989" alt="Image" src="https://github.com/user-attachments/assets/c2f55b93-2781-4440-ac24-6529f4b3d836" />
