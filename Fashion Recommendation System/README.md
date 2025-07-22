@@ -86,3 +86,9 @@ Improve accuracy with larger datasets
 Build a web app using Streamlit or Flask
 
 Integrate user input for customized recommendations
+
+
+## Output :
+
+<img width="1474" height="1009" alt="Image" src="https://github.com/user-attachments/assets/33cf94d3-edae-4ad8-825d-528270a01706" />
+
