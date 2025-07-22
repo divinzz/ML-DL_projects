@@ -47,6 +47,6 @@ By integrating the model with a **Flask web interface**, the system becomes inte
 It lays the groundwork for scalable applications like customer feedback analysis, product review filtering, and automated moderation systems.
 
 
-![Image](https://github.com/user-attachments/assets/0df74dc6-4a54-4943-8f7d-0b880fd3bb14)
-![Image](https://github.com/user-attachments/assets/6109ccbe-88b8-4ff7-b5ed-bf7acca3b089)
+<img width="1912" height="979" alt="Image" src="https://github.com/user-attachments/assets/d477d03f-c5dd-45ad-a949-c6249b664cb4" />
+<img width="1905" height="981" alt="Image" src="https://github.com/user-attachments/assets/9a5bb61a-a9c5-4b15-a7b6-55f00c5f1862" />
 
