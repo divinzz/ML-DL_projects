@@ -58,14 +58,8 @@ Edit
 
 ---
 
-## 🚀 Getting Started
 
-### 1. Clone the repository
-```bash
-git clone https://github.com/yourusername/image-caption-generator.git
-cd image-caption-generator
-
-2. Install dependencies
+. Install dependencies
 
 bash
 Copy
@@ -83,13 +77,15 @@ numpy
 pandas
 tqdm
 
-3. Run the Streamlit App
+. Run the Streamlit App
 
 bash
 Copy
 Edit
 streamlit run app.py
-4. Upload an image and generate captions in real-time!
+
+. Upload an image and generate captions in real-time!
+
 🧪 Model Performance
 Training loss: ↓ 3.12
 
