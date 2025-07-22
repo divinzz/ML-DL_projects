@@ -27,39 +27,11 @@ The project is packaged into a clean web application using [Streamlit](https://s
 ├── data/ # Directory containing fashion images
 └── requirements.txt # List of dependencies
 
-yaml
-Copy
-Edit
-
----
-
-## 🚀 How to Use
-
-> 💡 Before starting, make sure you have Python 3.7+ installed.
-
-### 1. Install Required Libraries
-
-Install the dependencies by running:
-
-```bash
-pip install -r requirements.txt
-Or manually install the key packages:
-
-bash
-Copy
-Edit
-pip install streamlit opencv-python scikit-learn numpy pandas Pillow
-2. Launch the App
-Run the Streamlit application locally:
-
-bash
-Copy
-Edit
-streamlit run app.py
-The app will open in your browser at http://localhost:8501.
 
 🧠 How It Works
+
 🖼️ Step 1: Feature Extraction
+
 Uses a pretrained model (e.g., ResNet50 or DenseNet201) from Keras.
 
 Removes the final classification layer to get embeddings from the penultimate layer.
@@ -67,11 +39,13 @@ Removes the final classification layer to get embeddings from the penultimate la
 Converts all images into 1D feature vectors.
 
 🔍 Step 2: Similarity Computation
+
 Calculates cosine similarity between the uploaded image and dataset embeddings.
 
 Returns top-N most similar images from the dataset.
 
 🌐 Step 3: Web Interface
+
 Built using Streamlit
 
 User uploads a fashion image
