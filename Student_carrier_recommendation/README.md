@@ -82,26 +82,6 @@ A user-friendly interface built with **Streamlit** allows:
 - Instant prediction of career aspiration
 - Real-time display of total and average score
 
-### 🔹 To run the app:
-
-```bash
-streamlit run app.py
-Make sure career_recommendation.pkl is available in your working directory.
-
-💻 Tech Stack
-Python
-
-Pandas, NumPy
-
-Scikit-learn
-
-imbalanced-learn (SMOTE)
-
-Matplotlib & Seaborn
-
-Streamlit
-
-Pickle
 
 Output :
 
