@@ -1,58 +1,71 @@
-# 🖼️ Image Caption Generator 🧠
+# 🧠📸 Image Caption Generator
 
-Automatically generate captions for images using Deep Learning (CNN + LSTM).  
-Built with TensorFlow and deployed using Streamlit.
-
----
-
-## 📚 Overview
-
-This project uses a **pre-trained DenseNet201** to extract visual features from images and an **LSTM decoder** to generate natural language captions.  
-Trained on the [Flickr8k Dataset](https://www.kaggle.com/datasets/adityajn105/flickr8k), each image has 5 ground-truth captions.
+This project generates descriptive captions for images using a deep learning model combining **DenseNet201** for image feature extraction and **LSTM** for language generation. The app is trained on the [Flickr8k dataset](https://www.kaggle.com/datasets/adityajn105/flickr8k) and deployed using **Streamlit**.
 
 ---
 
-## 🚀 Features
 
-- 📷 Feature Extraction with DenseNet201
-- 🧠 Sequence Modeling using LSTM
-- 🗣️ Custom Tokenizer with start/end tokens
-- 📊 Training with Early Stopping & LR Scheduler
-- 🌍 Streamlit Web App for live captioning
+## 📁 Project Structure
 
----
-
-## 🛠️ Installation
-
-```bash
-git clone https://github.com/YOUR-USERNAME/image-caption-generator.git
-cd image-caption-generator
-pip install -r requirements.txt
-📁 Folder Structure
-bash
-Copy
-Edit
 image-caption-generator/
 │
-├── app.py                   # Streamlit interface
-├── model.keras              # Trained captioning model
-├── feature_extractor.keras # CNN (DenseNet201)
-├── tokenizer.pkl            # Saved tokenizer
-├── flickr8k/                # Dataset folder
-│   ├── Images/
-│   └── captions.txt
-└── requirements.txt
-🧪 Run the Project
-1. 📥 Download Dataset
-From Kaggle: https://www.kaggle.com/datasets/adityajn105/flickr8k
-Extract into flickr8k/ with the following structure:
+├── app.py # Streamlit application
+├── model.keras # Trained caption generation model
+├── feature_extractor.keras # DenseNet201 feature extractor
+├── tokenizer.pkl # Tokenizer used for caption encoding
+├── flickr8k/ # Dataset folder
+│ ├── Images/
+│ └── captions.txt
+├── requirements.txt # List of Python dependencies
+└── README.md
 
+yaml
 Copy
 Edit
+
+---
+
+## 📦 Installation
+
+```bash
+git clone https://github.com/your-username/image-caption-generator.git
+cd image-caption-generator
+pip install -r requirements.txt
+📥 Dataset
+Download the dataset: Flickr8k - Kaggle
+
+Unzip the contents into the flickr8k/ directory as follows:
+
+
 flickr8k/
 ├── Images/
 └── captions.txt
-2. 🏋️‍♀️ Train the Model
+🛠️ Model Training Steps
+Caption Preprocessing
+
+Lowercase, remove punctuation, clean spacing
+
+Add startseq and endseq tokens
+
+Tokenization
+
+python
+Copy
+Edit
+from tensorflow.keras.preprocessing.text import Tokenizer
+tokenizer = Tokenizer()
+tokenizer.fit_on_texts(captions)
+Feature Extraction with DenseNet201
+
+python
+Copy
+Edit
+fe = Model(inputs=model.input, outputs=model.layers[-2].output)
+Sequence Modeling with LSTM
+Combined with image features using a custom architecture.
+
+Model Training
+
 python
 Copy
 Edit
@@ -62,51 +75,52 @@ caption_model.fit(
     validation_data=validation_generator,
     callbacks=[checkpoint, earlystopping, learning_rate_reduction]
 )
-3. 💾 Save Components
+Saving Models
+
 python
 Copy
 Edit
-model.save("model.keras")
+caption_model.save("model.keras")
 feature_extractor.save("feature_extractor.keras")
-
-import pickle
 with open("tokenizer.pkl", "wb") as f:
     pickle.dump(tokenizer, f)
-4. 🌐 Run the Web App
+🖥️ Running the Streamlit App
 bash
 Copy
 Edit
 streamlit run app.py
-📸 Sample Output
-Image:
-1026685415_0431cbf574.jpg
+Then open http://localhost:8501 in your browser.
 
-Generated Caption:
+📷 Example Output
+Input Image
 
-css
+
+Generated Caption
+
+text
 Copy
 Edit
 a dog running across a grassy field
-📉 Training Summary
+📊 Training Results
 Metric	Value
 Train Loss	~3.1
 Val Loss	~3.6
-Epochs	14
 Optimizer	Adam
+Epochs	14
 
 ✅ Requirements
-Python 3.10+
+Install all dependencies using:
 
-TensorFlow
+pip install -r requirements.txt
+Contents of requirements.txt:
 
-Pandas
-
-NumPy
-
-Matplotlib
-
-Pillow
-
-TQDM
-
-Streamlit
+nginx
+Copy
+Edit
+tensorflow
+numpy
+pandas
+matplotlib
+pillow
+tqdm
+streamlit
