@@ -83,6 +83,7 @@ A user-friendly interface built with **Streamlit** allows:
 - Real-time display of total and average score
 
 
-Output :
+
+## Output :
 
 <img width="1700" height="989" alt="Image" src="https://github.com/user-attachments/assets/d4ecef70-29b8-4193-a743-6f7161a9b675" />
