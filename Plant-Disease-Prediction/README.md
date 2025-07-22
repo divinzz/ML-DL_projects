@@ -76,4 +76,4 @@ It also lays the foundation for further enhancement through:
 
 ## OUTPUT :
 
-![Image](https://github.com/user-attachments/assets/c6d6f57a-243a-436b-b096-d3598fbdc943)
+<img width="1700" height="989" alt="Image" src="https://github.com/user-attachments/assets/885b18c9-927d-406b-9fa7-274946a24b49" />
