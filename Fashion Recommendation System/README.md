@@ -3,9 +3,10 @@
 The Fashion Recommendation System is a content-based image retrieval (CBIR) application that recommends visually similar fashion items based on a reference image. It leverages deep learning for image feature extraction and computes similarity between images to find the best matches from a fashion dataset.
 
 This project is ideal for use cases such as:
-- Online shopping experiences
-- Virtual styling assistants
-- Personal wardrobe management tools
+
+- 🛒 Online shopping experiences  
+- 🧍‍♀️ Virtual styling assistants  
+- 🧳 Personal wardrobe management tools
 
 ---
 
@@ -27,30 +28,32 @@ The project is packaged into a clean web application using [Streamlit](https://s
 ├── data/ # Directory containing fashion images
 └── requirements.txt # List of dependencies
 
+yaml
+Copy
+Edit
 
-🧠 How It Works
+---
 
-🖼️ Step 1: Feature Extraction
+## 🧠 How It Works
 
-Uses a pretrained model (e.g., ResNet50 or DenseNet201) from Keras.
+### 🖼️ Step 1: Feature Extraction
 
-Removes the final classification layer to get embeddings from the penultimate layer.
+- Uses a pretrained model (e.g., ResNet50 or DenseNet201) from Keras
+- Removes the final classification layer to get embeddings from the penultimate layer
+- Converts all images into 1D feature vectors
 
-Converts all images into 1D feature vectors.
+### 🔍 Step 2: Similarity Computation
 
-🔍 Step 2: Similarity Computation
+- Calculates **cosine similarity** between the uploaded image and dataset embeddings
+- Returns top-N most similar images from the dataset
 
-Calculates cosine similarity between the uploaded image and dataset embeddings.
+### 🌐 Step 3: Web Interface
 
-Returns top-N most similar images from the dataset.
+- Built using **Streamlit**
+- User uploads a fashion image
+- The app displays the top visually similar items
 
-🌐 Step 3: Web Interface
-
-Built using Streamlit
-
-User uploads a fashion image
-
-The app displays the top visually similar items
+---
 
 ## 📸 Sample Output
 
@@ -60,34 +63,36 @@ Here’s an example of how the app looks when a user uploads a fashion item:
 
 **Recommended Items:**
 
-- Similar shirts, dresses, or styles from the dataset
-- Based on visual features (texture, color, pattern)
+- Similar shirts, dresses, or styles from the dataset  
+- Based on visual features (texture, color, pattern)  
+- Displayed in a scrollable or grid layout
 
-The system displays the top visually similar images in a horizontal or grid layout.
+---
 
-🔮 Potential Improvements
-Use FAISS or Annoy for faster similarity search on large datasets
+## 🧪 Output Example
 
-Add multi-modal filtering (e.g., by color, price, brand)
+<img width="1474" height="1009" alt="Output Screenshot" src="https://github.com/user-attachments/assets/33cf94d3-edae-4ad8-825d-528270a01706" />
 
-Train a custom embedding model with contrastive or triplet loss
+---
 
-Integrate user feedback for personalization
+## 🔮 Potential Improvements
 
-🧾 License
-This project is licensed under the MIT License — feel free to use, modify, and distribute.
+- 🧠 Use FAISS or Annoy for faster similarity search on large datasets  
+- 🎨 Add multi-modal filtering (e.g., by color, price, brand)  
+- 🔬 Train a custom embedding model with contrastive or triplet loss  
+- 🧍‍♂️ Integrate user feedback for personalization  
 
-🙌 Acknowledgements
-Flickr-Fashion Dataset
+---
 
-Streamlit
+## 🧾 License
 
-Keras Applications
+This project is licensed under the **MIT License** — feel free to use, modify, and distribute.
 
-Pretrained CNNs for feature extraction
+---
 
+## 🙌 Acknowledgements
 
-## Output :
-
-<img width="1474" height="1009" alt="Image" src="https://github.com/user-attachments/assets/33cf94d3-edae-4ad8-825d-528270a01706" />
-
+- [Flickr-Fashion Dataset](https://github.com/xthan/flickr-style)  
+- [Streamlit](https://streamlit.io/)  
+- [Keras Applications](https://keras.io/api/applications/)  
+- Pretrained CNN models for feature extraction  
