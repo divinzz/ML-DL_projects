@@ -52,5 +52,4 @@ This project demonstrates how to use LSTM networks to perform sentiment analysis
 
 # OUTPUT OF THE TASK
 
-<img width="1912" height="979" alt="Image" src="https://github.com/user-attachments/assets/7d8d74b0-35f0-45ea-9c1c-228dee6d755d" />
-<img width="1905" height="981" alt="Image" src="https://github.com/user-attachments/assets/56985be9-c0d6-4066-b281-fa5b54f1eaca" />
+<img width="715" height="547" alt="Image" src="https://github.com/user-attachments/assets/1e26962e-5d20-411b-9295-c8a6fce8f6ec" />
