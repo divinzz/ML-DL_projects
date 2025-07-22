@@ -52,46 +52,71 @@ A deep learning project that automatically generates captions for images using a
 ├── train_model.ipynb # Jupyter Notebook with full training pipeline
 └── README.md
 
-yaml
-Copy
-Edit
 
 ---
 
 
-. Install dependencies
+1 Install required packages
 
 bash
 Copy
 Edit
 pip install -r requirements.txt
-Requirements:
+Required Libraries:
 
-txt
-Copy
-Edit
 tensorflow
-streamlit
-matplotlib
+
 numpy
+
 pandas
+
+matplotlib
+
 tqdm
 
-. Run the Streamlit App
+streamlit
+
+pickle
+
+You can create a requirements.txt file with these.
+
+2. Download and extract dataset 
+
+Place the dataset files (Images/, captions.txt) inside a flickr8k/ directory in your project root.
+
+3. Train the model (Optional)
+
+Use the provided training notebook or scripts.
+
+4. Run the Streamlit App
 
 bash
 Copy
 Edit
 streamlit run app.py
+🎯 Features
+Extracts image features with DenseNet201
 
-. Upload an image and generate captions in real-time!
+Tokenizes and encodes captions
 
-🧪 Model Performance
-Training loss: ↓ 3.12
+Trains a caption generation model
 
-Validation loss: ↓ 3.60
+Saves model and tokenizer
 
-Epochs: 14 (early stopping)
+Interactive caption generation with Streamlit
+
+🖼️ Example Output
+Image:
+(Upload your own in the app)
+
+Generated Caption:
+"a young boy is playing with a dog in the park"
+
+🧪 Model Info
+Best val_loss: ~3.60
+
+Early stopping after 14 epochs
+
 
 
 
