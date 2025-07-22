@@ -57,4 +57,4 @@ The Accident Severity Prediction Model represents a significant step forward in 
 
 # OUTPUT OF THE TASK
 
-![Image](https://github.com/user-attachments/assets/754e46cd-bdb0-4bea-a691-f0f63167dcef)
+<img width="910" height="681" alt="Image" src="https://github.com/user-attachments/assets/56b822c4-7727-476a-8862-58e19213c3ca" />
