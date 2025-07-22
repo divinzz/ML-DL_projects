@@ -83,6 +83,8 @@ Edit
 
 This project is licensed under the **MIT License** — feel free to use, modify, and distribute.
 
+<img width="1474" height="1009" alt="Image" src="https://github.com/user-attachments/assets/640837bc-72a3-40c4-ac14-ee454df26f8e" />
+
 ---
 
 ## 🙌 Acknowledgements
