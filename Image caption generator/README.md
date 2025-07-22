@@ -57,7 +57,7 @@ Edit
 
 ## 🚀 Getting Started
 
-### 1. Clone the repository
+1. Clone the repository
 
 ```bash
 git clone https://github.com/yourusername/image-caption-generator.git
@@ -95,6 +95,9 @@ Training loss: ↓ 3.12
 Validation loss: ↓ 3.60
 
 Epochs: 14 (early stopping)
+
+
+## output
 
 <img width="680" height="848" alt="Image" src="https://github.com/user-attachments/assets/b6677501-6d53-49da-b157-18dc62af5aa4" />
 
