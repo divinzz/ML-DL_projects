@@ -122,10 +122,6 @@ Early stopping after 14 epochs
 
 ## 🖼️ Example Output
 
-<img width="680" height="848" alt="Image" src="https://github.com/user-attachments/assets/b6677501-6d53-49da-b157-18dc62af5aa4" />
-
-**Generated Caption:**  
-`"a young boy is playing with a dog in the park"`
-
+<img width="680" height="848" alt="Image" src="https://github.com/user-attachments/assets/da190257-febe-43aa-8a37-a23911d21f33" />
 
 
